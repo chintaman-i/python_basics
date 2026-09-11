@@ -4,5 +4,5 @@
 
 role=input("Enter your role (student/other): ")
 age=int(input("Enter your age: "))
-print("Eligible:", role.lower() == "student" and age < 21)
+print("Eligible:", role == "student" and age < 21)
 
