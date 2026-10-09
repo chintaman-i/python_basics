@@ -1,9 +1,12 @@
-#prrint sum of digits
-n=int(input("enter a number: "))
+#prrint sum of digits also if number is -ve also sum should be
+n = int(input("Enter a number: "))
+sum = 0 
+num = str(abs(n))
 
-sum=0
-num=str(n)
-for i in range(1,len(num)+1):
-    sum+=int(num[i-1])
-
-print(sum) 
+if n == 0:
+    print("Enter a non-zero number")
+else:
+    for i in num:
+        sum += int(i)
+    
+    print(sum)

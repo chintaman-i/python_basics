@@ -1,13 +1,21 @@
 #create a list of hetrogenous numbers and names,split the list from the maximum number
+#add 2 numbers to 3rd posiyon in the list and split 
 
-list="12,23,37,89,12,1,sam,ram,tom,john"
+list1 = [1, 22, 33, 78, 91, 21, "sam", "ram", "tom", "john"]
 
-list2=list.split(",")
+max_num = list1[0]
 
-print(list2)
+for i in list1:
+    if type(i) == int:
+        if i > max_num:
+            max_num = i
 
-for i in range(len(list2)):
-    if i==max(list2):
-        print(list2[i])
-    
+print("Maximum number:", max_num)
 
+for i in range(len(list1)):
+    if list1[i] == max_num:
+        print("First list:", list1[:i])
+        print("Second list:", list1[i:])
+        break
+
+print()
